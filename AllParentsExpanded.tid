@@ -3,8 +3,9 @@ modified: 20240423020427323
 tags: 
 title: $:/plugins/pjerkins/aw-nested-tasks/AllParentsExpanded
 
+!! All Tasks
 <$vars noParents="[tags[]tag[Task]]">
-    <$list filter=`[tag[Task]!tagDone${[{$:/temp/TaskFilter!!text}]}$!filter<noParents>]`>
+    <$list filter=`[tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$!filter<noParents>]`>
         <$transclude tiddler="$:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTemplate" />
         <br/>
     </$list>
