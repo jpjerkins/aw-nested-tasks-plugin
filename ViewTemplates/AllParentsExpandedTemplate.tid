@@ -3,7 +3,9 @@ modified: 20240419233733165
 tags: 
 title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTemplate
 
-<$link />
+<$vars targetTask=<<currentTiddler>> >
+    {{$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskDoneCheckbox}}
+</$vars>
 <br/>
 <$list filter=`[tag<currentTiddler>tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$first[]]` variable="_">
     <$list filter=`[tag<currentTiddler>tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$]` >
