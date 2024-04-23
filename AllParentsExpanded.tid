@@ -1,0 +1,11 @@
+created: 20240423020427323
+modified: 20240423020427323
+tags: 
+title: $:/plugins/pjerkins/aw-nested-tasks/AllParentsExpanded
+
+<$vars noParents="[tags[]tag[Task]]">
+    <$list filter=`[tag[Task]!tagDone${[{$:/temp/TaskFilter!!text}]}$!filter<noParents>]`>
+        <$transclude tiddler="$:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTemplate" />
+        <br/>
+    </$list>
+</$vars>

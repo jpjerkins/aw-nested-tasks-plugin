@@ -1,14 +1,14 @@
 created: 20240419233733165
 modified: 20240419233733165
 tags: 
-title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpanded
+title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTemplate
 
 <$link />
 <br/>
 <$list filter=`[tag<currentTiddler>tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$first[]]` variable="_">
     <$list filter=`[tag<currentTiddler>tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$]` >
         <div style="padding-left:2em;">
-            <$transclude tiddler="$:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpanded" />
+            <$transclude tiddler="$:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTemplate" />
         </div>
     </$list>
 </$list>
