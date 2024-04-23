@@ -5,6 +5,7 @@ title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTempl
 
 <$vars targetTask=<<currentTiddler>> >
     {{$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskDoneCheckbox}}
+    {{||$:/plugins/pjerkins/aw-parked-tasks/ViewTemplates/TaskPButtonTemplate}}
     <$link />
 </$vars>
 <br/>
