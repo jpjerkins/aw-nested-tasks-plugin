@@ -1,0 +1,19 @@
+created: 20240423022853956
+creator: jpjerkins
+modified: 20240423022853956
+creator: jpjerkins
+tags: template $:/tags/ViewTemplate
+title: $:/plugins/pjerkins/aw-recursive-tasks/ViewTemplates/TaskChildTasksFooter
+list-after: $:/core/ui/ViewTemplate/body
+
+<% if [is[current]tag[Task]] %>
+    
+    <h2>Child Tasks</h2>
+    
+    <$transclude
+     $variable="list-tagged-draggable"
+     tag=<<currentTiddler>>
+     subFilter=`!tag[Done]${[{$:/temp/TaskFilter!!text}]}$`
+     itemTemplate="$:/plugins/pjerkins/aw-recursive-tasks/ViewTemplates/ChildTasksReorderingDragTemplate"
+    >
+<% endif %>
