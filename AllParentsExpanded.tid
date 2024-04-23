@@ -7,6 +7,5 @@ title: $:/plugins/pjerkins/aw-nested-tasks/AllParentsExpanded
 <$vars noParents="[tags[]tag[Task]]">
     <$list filter=`[tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$!filter<noParents>]`>
         <$transclude tiddler="$:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTemplate" />
-        <br/>
     </$list>
 </$vars>
