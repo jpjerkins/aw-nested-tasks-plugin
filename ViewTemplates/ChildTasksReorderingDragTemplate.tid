@@ -7,7 +7,7 @@ title: $:/plugins/pjerkins/aw-recursive-tasks/ViewTemplates/ChildTasksReordering
 
 <$vars targetTask=<<currentTiddler>> >
     <$link>&#9776;</$link>
-    {{||$:/plugins/pjerkins/aw-parked-tasks/ViewTemplates/TaskPButtonTemplate}}
     {{$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskDoneCheckbox}}
+    {{||$:/plugins/pjerkins/aw-parked-tasks/ViewTemplates/TaskPButtonTemplate}}
     <$link />
 </$vars>
