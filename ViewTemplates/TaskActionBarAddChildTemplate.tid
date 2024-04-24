@@ -1,9 +1,9 @@
 created: 20240424122930372
 modified: 20240424123321828
-title: TaskActionBarAddChildTemplate
+title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/TaskActionBarAddChildTemplate
 type: text/vnd.tiddlywiki
 tags: TaskActionBarControl
-list-after: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/TaskActionBarAddChild
+list-after: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/DeleteTaskButton
 
 | <$edit-text tiddler="$:/temp/new-task" default="" tag="input" />
 <$button>
