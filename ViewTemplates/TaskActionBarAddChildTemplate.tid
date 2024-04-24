@@ -5,7 +5,7 @@ type: text/vnd.tiddlywiki
 tags: TaskActionBarControl
 list-after: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/TaskActionBarAddChild
 
-<$edit-text tiddler="$:/temp/new-task" default="" tag="input" />
+| <$edit-text tiddler="$:/temp/new-task" default="" tag="input" />
 <$button>
 	<$list filter="[title[$:/temp/new-task]get[text]compare:string:ne[]]" variable=_>
 		<$action-createtiddler $basetitle={{$:/temp/new-task}} tags=`Task $(currentTiddler)$` />
