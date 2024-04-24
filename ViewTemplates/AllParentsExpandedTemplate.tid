@@ -4,11 +4,9 @@ tags:
 title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTemplate
 
 <div>
-    <$vars targetTask=<<currentTiddler>> >
-        {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot}}
-        <$link />
-        {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar}}
-    </$vars>
+    {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot}}
+    <$link />
+    {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar}}
 </div>
 <$list filter=`[tag<currentTiddler>tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$first[]]` variable="_">
     <$list filter=`[tag<currentTiddler>tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$]` >

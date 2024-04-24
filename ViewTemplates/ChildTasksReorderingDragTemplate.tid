@@ -5,9 +5,7 @@ creator: jpjerkins
 tags: 
 title: $:/plugins/pjerkins/aw-recursive-tasks/ViewTemplates/ChildTasksReorderingDragTemplate
 
-<$vars targetTask=<<currentTiddler>> >
-    <$link>&#9776;</$link>
-    {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot}}
-    <$link />
-    {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar}}
-</$vars>
+<$link>&#9776;</$link>
+{{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot}}
+<$link />
+{{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar}}
