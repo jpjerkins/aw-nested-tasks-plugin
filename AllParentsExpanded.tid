@@ -11,6 +11,7 @@ title: $:/plugins/pjerkins/aw-nested-tasks/AllParentsExpanded
 
 <$droppable actions=<<dropActions>> >
     <h2>All Tasks</h2>
+    [[Prioritize Top-Level Tasks|$:/plugins/pjerkins/aw-recursive-tasks/TopLevelTasks]]
 </$droppable>
 <$vars noParents="[tags[]tag[Task]]">
     <$list filter=`[tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$!filter<noParents>]`>

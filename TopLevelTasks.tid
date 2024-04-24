@@ -1,0 +1,9 @@
+created: 20240424223150317
+modified: 20240424223917269
+tags: 
+title: $:/plugins/pjerkins/aw-recursive-tasks/TopLevelTasks
+type: text/vnd.tiddlywiki
+
+\define hasParentFilter() [tags[]tag[Task]]
+
+<<list-tagged-draggable tag:"Task" subFilter:"!filter<hasParentFilter>" itemTemplate:"$:/plugins/pjerkins/aw-recursive-tasks/ViewTemplates/ChildTasksReorderingDragTemplate">>
