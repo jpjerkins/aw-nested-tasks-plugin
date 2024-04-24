@@ -3,7 +3,15 @@ modified: 20240423020427323
 tags: 
 title: $:/plugins/pjerkins/aw-nested-tasks/AllParentsExpanded
 
-!! All Tasks
+\define dropActions()
+<$vars tasksFilter="[tag[Task]]">
+    <$action-listops $tiddler=<<actionTiddler>> $field="tags" $subfilter="+[!filter<tasksFilter>]" />
+</$vars>
+\end
+
+<$droppable actions=<<dropActions>> >
+    <h2>All Tasks</h2>
+</$droppable>
 <$vars noParents="[tags[]tag[Task]]">
     <$list filter=`[tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$!filter<noParents>]`>
         <$transclude tiddler="$:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTemplate" />

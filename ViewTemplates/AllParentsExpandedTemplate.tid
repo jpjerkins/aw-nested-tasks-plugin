@@ -3,9 +3,19 @@ modified: 20240419233733165
 tags: 
 title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTemplate
 
+\define dropActions()
+<$vars tasksFilter="[tag[Task]]">
+    <$action-listops $tiddler=<<actionTiddler>> $field="tags" $subfilter="+[!filter<tasksFilter>]" />
+    <$action-listops $tiddler=<<actionTiddler>> $tags=<<currentTiddler>> />
+</$vars>
+\end
+
 <div>
+    <$draggable tag="span" tiddler=<<currentTiddler>> >&#9776;</$draggable>
     {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot}}
-    <$link />
+    <$droppable actions=<<dropActions>> >
+        <$link />
+    </$droppable>
     {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar}}
 </div>
 <$list filter=`[tag<currentTiddler>tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$first[]]` variable="_">
