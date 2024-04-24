@@ -6,7 +6,7 @@ title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTempl
 \define dropActions()
 <$vars tasksFilter="[tag[Task]]">
     <$action-listops $tiddler=<<actionTiddler>> $field="tags" $subfilter="+[!filter<tasksFilter>]" />
-    <$action-listops $tiddler=<<actionTiddler>> $tags=<<currentTiddler>> />
+    <$action-listops $tiddler=<<actionTiddler>> $field="tags" $subfilter=`[[$(currentTiddler)$]]` />
 </$vars>
 \end
 
