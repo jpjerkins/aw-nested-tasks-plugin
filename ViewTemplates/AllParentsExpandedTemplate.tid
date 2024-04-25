@@ -11,12 +11,14 @@ title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTempl
 \end
 
 <div>
-    <$draggable tag="span" tiddler=<<currentTiddler>> >&#9776;</$draggable>
-    {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot}}
-    <$droppable actions=<<dropActions>> >
-        <$link />
-    </$droppable>
-    {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar}}
+    <$draggable tag="span" tiddler=<<currentTiddler>> >
+        &#9776;
+        {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot}}
+        <$droppable actions=<<dropActions>> >
+            <$link />
+        </$droppable>
+        {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar}}
+    </$draggable>
 </div>
 <$list filter=`[tag<currentTiddler>tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$first[]]` variable="_">
     <$list filter=`[tag<currentTiddler>tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$]` >
