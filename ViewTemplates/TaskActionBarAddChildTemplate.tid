@@ -8,7 +8,7 @@ list-after: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/DeleteTaskButton
 | <$edit-text tiddler="$:/temp/new-task" default="" tag="input" />
 <$button>
 	<$list filter="[title[$:/temp/new-task]get[text]compare:string:ne[]]" variable=_>
-		<$action-createtiddler $basetitle={{$:/temp/new-task}} tags=`Task $(currentTiddler)$` />
+		<$action-createtiddler $basetitle={{$:/temp/new-task}} tags=`Task [[$(currentTiddler)$]]` />
 		<$action-deletetiddler $tiddler="$:/temp/new-task" />
 		<<closeProjectActions>>
 	</$list>
