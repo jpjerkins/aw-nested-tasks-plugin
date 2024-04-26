@@ -20,7 +20,7 @@ title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTempl
         {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar}}
     </$draggable>
 </div>
-<$list filter=`[tag<currentTiddler>tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$]` >
+<$list filter=`[tag<currentTiddler>tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$sortby{$(currentTiddler)$!!list}]` >
     <div style="padding-left:2em;">
         <$transclude tiddler="$:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTemplate" />
     </div>
