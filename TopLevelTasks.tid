@@ -6,7 +6,8 @@ type: text/vnd.tiddlywiki
 
 \define hasParentFilter() [tags[]tag[Task]]
 
-<<list-tagged-draggable
- tag:"Task"
- subFilter:"!filter<hasParentFilter>"
- itemTemplate:"$:/plugins/pjerkins/aw-recursive-tasks/ViewTemplates/ChildTasksReorderingDragTemplate">>
+<$macrocall
+ $name="list-tagged-draggable"
+ tag="Task"
+ subFilter=`!filter<hasParentFilter>${[{$:/temp/NestedTasksOtherExclusionFilters!!text}]}$`
+ itemTemplate="$:/plugins/pjerkins/aw-recursive-tasks/ViewTemplates/ChildTasksReorderingDragTemplate" />

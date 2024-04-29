@@ -1,0 +1,27 @@
+created: 20240429003122178
+modified: 20240429003242295
+tags: $:/tags/StartupAction/PostRender
+title: $:/plugins/pjerkins/aw-nested-tasks/Macros/StartupActions
+type: text/vnd.tiddlywiki
+
+<$reveal
+ state="$:/temp/NestedTasksOtherExclusionFilters!!nested-filter-flag"
+ text="Nested Tasks Other Exclusion Filters Added"
+ type=nomatch>
+    <$action-setfield
+    $tiddler="$:/temp/NestedTasksOtherExclusionFilters"
+    $field="text"
+    $value="" />
+    <$list filter="[all[shadows+tiddlers]tag[DefaultTaskExclusionFilter]!tag[NestedTasks]]" variable="currentExclusionFilterSource">
+        <$vars currentExclusionFilter={{{ [<currentExclusionFilterSource>get[text]] }}}>
+            <$action-setfield
+            $tiddler="$:/temp/NestedTasksOtherExclusionFilters"
+            $field="text"
+            $value=`${[{$:/temp/NestedTasksOtherExclusionFilters!!text}]}$$(currentExclusionFilter)$` />
+        </$vars>
+    </$list>
+    <$action-setfield
+    $tiddler="$:/temp/NestedTasksOtherExclusionFilters"
+    $field="nested-filter-flag"
+    $value="Nested Tasks Other Exclusion Filters Added" />
+</$reveal>

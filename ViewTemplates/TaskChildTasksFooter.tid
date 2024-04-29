@@ -8,18 +8,18 @@ list-after: $:/core/ui/ViewTemplate/body
 
 <% if [is[current]tag[Task]] %>
     
-    <% if [tag<currentTiddler>tag[Task]] %>
+    <$list filter=`[tag<currentTiddler>tag[Task]${[{$:/temp/NestedTasksOtherExclusionFilters!!text}]}$first[]]` variable="_">
 
         <h2>Child Tasks</h2>
         
         <$transclude
         $variable="list-tagged-draggable"
         tag=<<currentTiddler>>
-        subFilter=`tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$`
+        subFilter=`tag[Task]${[{$:/temp/NestedTasksOtherExclusionFilters!!text}]}$`
         itemTemplate="$:/plugins/pjerkins/aw-recursive-tasks/ViewTemplates/ChildTasksReorderingDragTemplate"
         />
 
-    <% endif %>
+    </$list>
 
     <$button>
         <$vars newNoteTiddler=`$(currentTiddler)$ - New Note` >
