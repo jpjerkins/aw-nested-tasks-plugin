@@ -1,7 +1,7 @@
 created: 20240424223150317
 modified: 20240424223917269
 tags: 
-title: $:/plugins/pjerkins/aw-recursive-tasks/TopLevelTasks
+title: $:/plugins/pjerkins/aw-nested-tasks/TopLevelTasks
 type: text/vnd.tiddlywiki
 
 \define hasParentFilter() [tags[]tag[Task]]
@@ -10,4 +10,4 @@ type: text/vnd.tiddlywiki
  $name="list-tagged-draggable"
  tag="Task"
  subFilter=`!filter<hasParentFilter>${[{$:/temp/NestedTasksOtherExclusionFilters!!text}]}$`
- itemTemplate="$:/plugins/pjerkins/aw-recursive-tasks/ViewTemplates/ChildTasksReorderingDragTemplate" />
+ itemTemplate="$:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/ChildTasksReorderingDragTemplate" />

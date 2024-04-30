@@ -3,7 +3,7 @@ creator: jpjerkins
 modified: 20240423022853956
 creator: jpjerkins
 tags: 
-title: $:/plugins/pjerkins/aw-recursive-tasks/ViewTemplates/ChildTasksReorderingDragTemplate
+title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/ChildTasksReorderingDragTemplate
 
 <$draggable tag="span" tiddler=<<currentTiddler>>>&#9776;</$draggable>
 {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot}}
