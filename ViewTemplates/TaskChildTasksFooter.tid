@@ -12,12 +12,14 @@ list-after: $:/core/ui/ViewTemplate/body
 
         <h2>Child Tasks</h2>
         
-        <$transclude
-        $variable="list-tagged-draggable"
-        tag=<<currentTiddler>>
-        subFilter=`tag[Task]${[{$:/temp/NestedTasksOtherExclusionFilters!!text}]}$`
-        itemTemplate="$:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/ChildTasksReorderingDragTemplate"
-        />
+        <$set name="sortList" filter="[list<currentTiddler>]" >
+            <$transclude
+            $variable="list-tagged-draggable"
+            tag=<<currentTiddler>>
+            subFilter=`tag[Task]${[{$:/temp/NestedTasksOtherExclusionFilters!!text}]}$sortby<sortList>`
+            itemTemplate="$:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/ChildTasksReorderingDragTemplate"
+            />
+        </$set>
 
     </$list>
 
