@@ -5,7 +5,7 @@
   "core.version": ">=5.3.3",
   "description": "ArchWork Nested Tasks plugin",
   "plugin-type": "plugin",
-  "version": "0.0.09",
+  "version": "0.0.10",
   "name": "aw-nested-tasks",
   "dependents": "[[$:/plugins/pjerkins/aw-nested-tasks]]",
   "list": "readme"
