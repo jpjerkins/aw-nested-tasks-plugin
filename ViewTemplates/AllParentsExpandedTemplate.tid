@@ -17,6 +17,7 @@ title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTempl
         <$droppable actions=<<dropActions>> >
             <$link />
         </$droppable>
+        <$list filter="[all[shadows+tiddlers]tag[AllParentsExpandedTaskIcon]]" variable=template><$transclude tiddler=<<template>> /></$list>
         {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar}}
     </$draggable>
 </div>
