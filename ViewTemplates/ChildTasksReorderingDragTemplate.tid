@@ -5,7 +5,15 @@ creator: jpjerkins
 tags: 
 title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/ChildTasksReorderingDragTemplate
 
-<$draggable tag="span" tiddler=<<currentTiddler>>>&#9776;</$draggable>
+<style>
+.draggable {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+}
+</style>
+
+<$draggable tag="span" tiddler=<<currentTiddler>> class="draggable">&#9776;</$draggable>
 {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot}}
 <$link />
 {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar}}

@@ -10,8 +10,16 @@ title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTempl
 </$vars>
 \end
 
+<style>
+.draggable {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+}
+</style>
+
 <div>
-    <$draggable tag="span" tiddler=<<currentTiddler>> >
+    <$draggable tag="span" tiddler=<<currentTiddler>> class="draggable" >
         &#9776;
         {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot}}
         <$droppable actions=<<dropActions>> >
