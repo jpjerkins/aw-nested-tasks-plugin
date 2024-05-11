@@ -9,7 +9,6 @@ title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/ChildTasksReorderingDra
 .draggable {
     -webkit-user-select: none;
     -webkit-touch-callout: none;
-    -webkit-user-drag: none;
 }
 </style>
 
