@@ -2,7 +2,7 @@ created: 20240424122930372
 modified: 20240424123321828
 title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/TaskActionBarAddChildTemplate
 type: text/vnd.tiddlywiki
-tags: TaskActionBarControl
+tags: TaskActionBarControl TaskHeaderToolbarControl
 list-after: $:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/DeleteTaskButton
 
 \import [[$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot]]
