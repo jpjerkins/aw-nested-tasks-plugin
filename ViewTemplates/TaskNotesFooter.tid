@@ -1,0 +1,27 @@
+created: 20240423022853956
+creator: jpjerkins
+modified: 20240423022853956
+creator: jpjerkins
+tags: template $:/tags/ViewTemplate
+title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/TaskNotesFooter
+list-after: $:/core/ui/ViewTemplate/body
+
+<% if [is[current]tag[Task]] %>
+    
+    <$button>
+        <$vars newNoteTiddler=`$(currentTiddler)$ - New Note` >
+            <$action-createtiddler $basetitle=<<newNoteTiddler>> tags=`[[$(currentTiddler)$]]` />
+            <$action-sendmessage $message="tm-edit-tiddler" $param=<<newNoteTiddler>> />
+        </$vars>
+        New Note
+    </$button>
+
+    <% if [tag<currentTiddler>!tag[Task]!tag[Meetings]] %>
+
+        <h2>Notes</h2>
+
+        <<list-links filter:"[tag<currentTiddler>!tag[Task]!tag[Meetings]!sort[created]]" >>
+
+    <% endif %>
+
+<% endif %>
