@@ -10,23 +10,14 @@ title: $:/plugins/pjerkins/aw-nested-tasks/ViewTemplates/AllParentsExpandedTempl
 </$vars>
 \end
 
-<style>
-.draggable {
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-}
-</style>
-
 <div>
-    <$draggable tag="span" tiddler=<<currentTiddler>> class="draggable" >
-        &#9776;
-        {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot}}
-        <$droppable actions=<<dropActions>> >
-            <$link />
-        </$droppable>
-        <$list filter="[all[shadows+tiddlers]tag[AllParentsExpandedTaskIcon]]" variable=template><$transclude tiddler=<<template>> /></$list>
-        {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar}}
-    </$draggable>
+    {{||$:/plugins/pjerkins/aw-ui-controls/ViewTemplates/DragHandle}}
+    {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar3Dot}}
+    <$droppable actions=<<dropActions>> >
+        <$link />
+    </$droppable>
+    <$list filter="[all[shadows+tiddlers]tag[AllParentsExpandedTaskIcon]]" variable=template><$transclude tiddler=<<template>> /></$list>
+    {{||$:/plugins/pjerkins/aw-basic-tasks/ViewTemplates/TaskActionBar}}
 </div>
 <$list filter=`[tag<currentTiddler>tag[Task]!tag[Done]${[{$:/temp/TaskFilter!!text}]}$sortby{$(currentTiddler)$!!list}]` >
     <div style="padding-left:2em;">
